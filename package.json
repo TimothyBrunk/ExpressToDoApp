@@ -1,0 +1,22 @@
+{
+  "name": "expresstodo",
+  "version": "1.0.0",
+  "description": "This project began to implement a mySQL Database with JavaScript, Node, and Express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimothyBrunk/ExpressToDoApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimothyBrunk/ExpressToDoApp/issues"
+  },
+  "homepage": "https://github.com/TimothyBrunk/ExpressToDoApp#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
