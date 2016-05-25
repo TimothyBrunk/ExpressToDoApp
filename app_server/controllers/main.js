@@ -13,7 +13,9 @@ module.exports.index = function(req, res){
     mysql.getConnection(function(err, con){
       con.query('Select * from expenses', function(err, rows){
           if(err) throw err;
-          res.render('index', { title : 'Express Todo App', todos: rows });
+          console.log("You are now connected");
+
+          res.render('index', {data:rows[0]});
       });
     });
 };

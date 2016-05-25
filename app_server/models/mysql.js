@@ -3,9 +3,9 @@ var mysql = require('mysql');
 exports.getConnection = function(callback){
   var con = mysql.createConnection({
     host     : 'localhost',
-    user     : 'guest',
-    password : 'guest',
-    database : 'todoDB'
+    user     : 'root',
+    password : 'root',
+    database : 'sharedexpenses'
   });
 
   con.connect(function(err){
