@@ -11,4 +11,12 @@ router.get('/', controller.index);
 // '/' is index
 router.get('/home', controller.index);
 
+router.post('/create', controller.create);
+
+router.post('/delete', controller.delete);
+
+router.post('/edit', controller.edit);
+
+router.post('/update', controller.update);
+
 module.exports = router;

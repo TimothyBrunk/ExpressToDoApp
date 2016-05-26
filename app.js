@@ -18,8 +18,12 @@ app.set('view engine', 'handlebars');
 
 
 
-
+app.use('/', require('./app_server/routes/index.js'));
 app.use('/home', require('./app_server/routes/index.js'));
+app.use('/create', require('./app_server/routes/index.js'));
+app.use('/delete', require('./app_server/routes/index.js'));
+app.use('/edit', require('./app_server/routes/index.js'));
+app.use('/update', require('./app_server/routes/index.js'));
 
 
 app.use(function(req, res){

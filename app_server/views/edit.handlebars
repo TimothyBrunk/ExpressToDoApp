@@ -1,0 +1,23 @@
+<h1>Edit Expense</h1>
+{{#each data}}
+<h2>Shared Expense: {{this.id}}</h2>
+<h3>Date: {{date}}</h3>
+<h3>Category: {{category}}</h3>
+<h3>Expense: ${{expenses}}</h3>
+<h3>Notes: {{notes}}</h3>
+
+<form method="POST" action ="/update">
+  <input type="hidden" value="{{this.id}}" name="upid">
+  <input type ="text" name="date" placeholder="Enter Date" value="{{this.date}}"required>
+  <select name="category" required  placeholder="Category" value="{{this.category}}">
+    <option size="800" selected="selected" value="" disabled>{{this.category}}</option>
+    <option value="Groceries">Groceries</option>
+    <option value="Utilities">Utilities</option>
+    <option value="Household">Household</option>
+    <option value="Entertainment">Entertainment</option>
+    <option value="Rent">Rent</option>
+  <input type ="number" name="expenses" size="40" placeholder="Enter Expense" value="{{this.expenses}}" required="">
+  <input type ="text" name="notes" placeholder = "Enter Notes" value="{{this.notes}}" size="60"required="">
+  <input type ="submit" name="submit" value="Submit">
+</form>
+{{/each}}
