@@ -1,5 +1,12 @@
 <h1>Home Page</h1>
+<form action =" "
 
-<h2>Most Recent: {{data.id}} {{data.date}}
-  {{data.category}} {{data.expense}} 
-{{data.notes}}</h2>
+{{#each data}}
+<h2>Shared Expense: {{this.id}}</h2>
+<h3>Date: {{date}}</h3>
+<h3>Category: {{category}}</h3>
+<h3>Expense: ${{expenses}}</h3>
+<h3>Notes: {{notes}}</h3>
+<a href="/home{{Previous}}">Previous</a>
+<a href="/home{{Next}}">Next</a>
+{{/each}}
