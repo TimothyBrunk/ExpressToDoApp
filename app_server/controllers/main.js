@@ -60,14 +60,15 @@ module.exports.edit = function(req, res){
 };
 module.exports.update = function(req, res){
     var id = req.body.upid;
-    var date = req.body.date;
+    var olddate = req.body.date;
+    var date = olddate.replace( "-","").replace("-", "");
     var category = req.body.category;
     var expenses = req.body.expenses;
     var notes = req.body.notes;
     console.log(id);
     console.log("in update method");
     console.log(date);
-        console.log(id); 
+        console.log(id);
     mysql.getConnection(function(err, con){
       con.query("UPDATE expenses SET date='"+date+"', category='"+category+"', expenses="+expenses+", notes='"+notes+"' WHERE id ="+id+";");
     });

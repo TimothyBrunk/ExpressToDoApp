@@ -8,7 +8,7 @@
 
 <form method="POST" action ="/update">
   <input type="hidden" value="{{this.id}}" name="upid">
-  <input type ="text" name="date" placeholder="Enter Date" value="{{this.date}}"required>
+  <input type ="date" name="date" placeholder="Enter Date" value="{{this.date}}"required>
   <select name="category" required  placeholder="Category" value="{{this.category}}">
     <option size="800" selected="selected" value="" disabled>{{this.category}}</option>
     <option value="Groceries">Groceries</option>
