@@ -1,6 +1,5 @@
 <h1>Edit Expense</h1>
 {{#each data}}
-<h2>Shared Expense: {{this.id}}</h2>
 <h3>Date: {{date}}</h3>
 <h3>Category: {{category}}</h3>
 <h3>Expense: ${{expenses}}</h3>
@@ -20,4 +19,5 @@
   <input type ="text" name="notes" placeholder = "Enter Notes" value="{{this.notes}}" size="60"required="">
   <input type ="submit" name="submit" value="Submit">
 </form>
+<a href="/">Home</a> 
 {{/each}}

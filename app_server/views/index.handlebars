@@ -1,6 +1,5 @@
-<h1>Expense Form </h1>
 
-<h3>Enter Expense:</h3>
+<h3>Expense Form</h3>
 <form method="POST" action ="/create" id="input">
   <input type ="date" name="date" placeholder="Enter Date" required>
   <select name="category" required  placeholder="Category">
@@ -16,6 +15,7 @@
 </form>
 <br>
 
+<h1>Expense Report </h1>
 
 {{#each data}}
 
@@ -28,7 +28,7 @@
   <input type="submit" value="Delete"> </form>
   <form method="POST" action="/edit" >
       <input type="hidden" name="editid" value="{{this.id}}">
-      <input type="submit" value="Edit">
+      <input type="submit"  value="Edit">
       </form>
 
 {{/each}}
