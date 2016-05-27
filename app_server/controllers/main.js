@@ -12,7 +12,7 @@ var mysql = require('../models/mysql.js');
 module.exports.index = function(req, res){
     var id = req.params.id;
     mysql.getConnection(function(err, con){
-      con.query('Select * from expenses ORDER by date ASC', function(err, rows){
+      con.query('Select * from expenses ORDER by date DESC', function(err, rows){
           if(err) throw err;
           console.log("You are now connected");
           res.render('index', {data:rows});
