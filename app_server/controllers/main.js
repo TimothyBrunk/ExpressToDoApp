@@ -12,7 +12,7 @@ var mysql = require('../models/mysql.js');
 module.exports.index = function(req, res){
     var id = req.params.id;
     mysql.getConnection(function(err, con){
-      con.query('Select * from expenses', function(err, rows){
+      con.query('Select * from expenses ORDER by date ASC', function(err, rows){
           if(err) throw err;
           console.log("You are now connected");
           res.render('index', {data:rows});
@@ -73,4 +73,20 @@ module.exports.update = function(req, res){
       con.query("UPDATE expenses SET date='"+date+"', category='"+category+"', expenses="+expenses+", notes='"+notes+"' WHERE id ="+id+";");
     });
     res.redirect('/');
+};
+module.exports.submitform = function(req, res){
+
+  console.log("submitform");
+
+    res.render('submitform');
+};
+module.exports.orderbycategory = function(req, res){
+    var id = req.params.id;
+    mysql.getConnection(function(err, con){
+      con.query('Select * from expenses ORDER by category ASC ', function(err, rows){
+          if(err) throw err;
+          console.log("Order By Category");
+          res.render('category', {data:rows});
+      });
+    });
 };

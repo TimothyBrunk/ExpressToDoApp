@@ -1,0 +1,17 @@
+<h1>Expense Report </h1>
+
+{{#each data}}
+
+<h3>Date: {{date}}</h3>
+<h3>Category: {{category}}</h3>
+<h3>Expense: ${{expenses}}</h3>
+<h3>Notes: {{notes}}</h3>
+<form method="POST" action="/delete" >
+  <input type="hidden" name="exid" value="{{this.id}}">
+  <input type="submit" value="Delete"> </form>
+  <form method="POST" action="/edit" >
+      <input type="hidden" name="editid" value="{{this.id}}">
+      <input type="submit"  value="Edit">
+      </form>
+
+{{/each}}
